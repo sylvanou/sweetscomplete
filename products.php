@@ -17,11 +17,11 @@ $next = ($page < $lastPage) ? $page + 1 : $page;
 
 ?>
 
-<!DOCTYPE php>
-<php>
+<!DOCTYPE HTML>
+<html>
 <head>
 <title>Sweets Complete | Products</title>
-<meta http-equiv="Content-Type" content="text/php; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name ="description" content ="Sweets Complete">
 <meta name="keywords" content="">
 <link rel="stylesheet" href="css/main.css" type="text/css">
@@ -62,10 +62,10 @@ $next = ($page < $lastPage) ? $page + 1 : $page;
 			<br />
 			<select name="title" class="s2">
 				<?php sort($titles, SORT_STRING);
-				foreach ($titles as $value) {
+			foreach ($titles as $value) {
 				printf("<option>%s</option>", $value);
-				}
-				?>
+			}
+			?>
 			</select>
 			<br />
 			<input type="submit" name="search" value="Search Products" class="button marT5" />
@@ -113,5 +113,5 @@ $next = ($page < $lastPage) ? $page + 1 : $page;
 </div><!-- wrapper -->
 
 </body>
-</php>
+</html>
 
