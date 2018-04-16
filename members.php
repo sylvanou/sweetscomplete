@@ -65,22 +65,20 @@ $next = ($page < $lastPage) ? $page + 1 : $page;
 			<input type="hidden" name="page" value="members" />
 		</form>
 	<br/><br/>
-	<a class="pages" href="members.html">&lt;prev</a>
+	<a class="pages" href="members.php.?page=<?php echo $prev; ?>">&lt;prev</a>
 	&nbsp;|&nbsp;
-	<a class="pages" href="members.html">next&gt;</a>
+	<a class="pages" href="members.php.?page=<?php echo $next; ?>">next&gt;</a>
 	<table>
 		<tr>
 			<th>Member ID</th><th>Name</th><th>City</th><th>Email</th>
 		</tr>
-		<?php sort($members, SORT_STRING);
-			foreach($members as $member){
-				printf("<option>%s</option>", $member);
-			}
+		<?php 	
+			echo $view->displayMembers($page, $linesPerPage, $maxMembers, $members->getMembers());
 		?>
 		
 	</table>
 	<br/>
-	<a href="addmember.html" class="abutton">&nbsp;&nbsp;&nbsp;Member Sign Up&nbsp;&nbsp;&nbsp;</a>
+	<a href="addmember.html" 	class="abutton">&nbsp;&nbsp;&nbsp;Member Sign Up&nbsp;&nbsp;&nbsp;</a>
 
 </div>
 <br class="clear-all"/>

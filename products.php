@@ -62,10 +62,10 @@ $next = ($page < $lastPage) ? $page + 1 : $page;
 			<br />
 			<select name="title" class="s2">
 				<?php sort($titles, SORT_STRING);
-			foreach ($titles as $value) {
+				foreach ($titles as $value) {
 				printf("<option>%s</option>", $value);
-			}
-			?>
+				}
+				?>
 			</select>
 			<br />
 			<input type="submit" name="search" value="Search Products" class="button marT5" />

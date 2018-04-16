@@ -47,11 +47,11 @@ class View
                     . $members[$i + $offset]['name']
                     . '</td>';
             $output .= '<td>';
-            $output .= $members[i + $offset]['city'];
+            $output .= $members[$i + $offset]['city'];
             $output .= '</td>';
             $output .= '<td><img src="images/e.gif'
-                    . '" />'.
-            $output . $members[$i + $offset]['email'];
+                    . '" />';
+            $output .= $members[$i + $offset]['email'];
             $output .= '</td></tr>';
         }
         return $output;
